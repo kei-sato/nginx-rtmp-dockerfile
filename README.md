@@ -23,6 +23,18 @@ How to user
    when you start streaming to the server, it needs to generate the first
    segments and the related playlists.
 
+Change Log
+----------
+
+20160328
+--------
+
+Added feature to serve static files in /usr/share/nginx/html
+
+```
+docker run -p 1935:1935 -p 8080:80 -v /path/to/html:/usr/share/nginx/html:ro --rm nginx_rtmp:root_index
+open http://localhost:8080/
+```
 
 Links
 -----

@@ -7,7 +7,7 @@ EXPOSE 1935
 EXPOSE 80
 
 # create directories
-RUN mkdir /src && mkdir /config && mkdir /logs && mkdir /data && mkdir /static
+RUN mkdir /src && mkdir /config && mkdir /logs && mkdir /data && mkdir /static && mkdir -p /usr/share/nginx/html
 
 # update and upgrade packages
 RUN apt-get update && apt-get upgrade -y && apt-get clean
